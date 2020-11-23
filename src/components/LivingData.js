@@ -54,7 +54,7 @@ const LivingData = ({ handleLivingDataMore, LivingDataMoreActive, DayTime }) => 
                     </div>
                 </div>
             </div>
-            {LivingDataMoreActive ? <LivingDataMore TimeExpandedInfo={TimeExpandedInfo} /> : null}
+            {LivingDataMoreActive ? <LivingDataMore DayTime={DayTime} TimeExpandedInfo={TimeExpandedInfo} /> : null}
         </>
     );
 }
