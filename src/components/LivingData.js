@@ -4,7 +4,6 @@ import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import LivingDataMore from './LivingDataMore'
 import arrow from '../images/arrow.svg'
 
-
 const ARROW_MORE = {
     transform: 'rotateX(0deg)'
 }
@@ -13,7 +12,8 @@ const ARROW_LESS = {
     transform: 'rotateX(180deg)'
 }
 
-const LivingData = ({ handleLivingDataMore, LivingDataMoreActive }) => {
+const LivingData = ({ handleLivingDataMore, LivingDataMoreActive, DayTime }) => {
+
     const [locations, setLocations] = useState([])
     const [TimeExpandedInfo, setTimeExpandedInfo] = useState([])
 
@@ -23,7 +23,6 @@ const LivingData = ({ handleLivingDataMore, LivingDataMoreActive }) => {
         const response = await fetch(API)
         const responseJson = await response.json()
         setTimeExpandedInfo(responseJson)
-        console.log(responseJson)
     }
 
     const getLocation = async () => {
@@ -44,7 +43,7 @@ const LivingData = ({ handleLivingDataMore, LivingDataMoreActive }) => {
         <>
             <div className="section-livingdata">
                 <div className="livingdata_text">
-                    <p><FontAwesomeIcon icon={faSun} /> GOOD MORNING, IT'S CURRENTLY</p>
+                    <p><FontAwesomeIcon icon={DayTime ? faSun : faMoon} /> {DayTime ? `GOOD MORNING` : `GOOD EVENING`}, IT'S CURRENTLY</p>
                     <h1>{currentDate}</h1>
                     <div className="Town-Country-btn" key={locations.ip}><h3>IN {locations.city} {locations.country_name}</h3>
                         <button
