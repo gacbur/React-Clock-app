@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Clock-app{
+    background-image: url("./images/forest-day-img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:3em 8em;
+    width:100%;
+    height:100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Quotes */
+
+.quotes-section{
+    height: 50%;
+    width:100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.quotes{
+    display: flex;
+    max-width: 55%;
+    min-width: 55%;
+    color:white;
+    font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.quotes-text{
+    line-height: 28px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quotes-text h4{
+    margin-top: .5em;
 }
+
+
+.quotes-reload-btn{
+    margin-left: 20px;
+    color: rgb(211, 211, 211);
+    cursor: pointer;
+    transition: .2s ease;
+}
+.quotes-reload-btn:hover{
+    color: rgb(255, 255, 255);
+}
+
+/* LivingData */
+
+.section-livingdata{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    color:white;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.section-livingdata h1{
+    font-size: 200px;
+    letter-spacing: -5px;
+}   
+
+.section-livingdata h3{
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -4,8px;
+    text-transform: capitalize;
+}   
+
+.Town-Country-btn{
+    width:100%;
+    text-transform: capitalize;
+    display: flex;
+}
+
+.Town-Country-btn h3{
+    width:100%;
+    display: block;
+    flex-grow: 1;
+}
+
+.show-hide-btn{
+    border:none;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 50em;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    padding:.6em 1em;
+}
+
+.show-hide-btn p{
+    color:#777777;
+    font-size:16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.show-hide-btn img{
+    width:38px;
+    display: block;
+    margin-left: auto;
+}
+
+.show-hide-btn img:hover{
+    width:38px;
+    display: block;
+    margin-left: auto;
+    background-color:white;
+}
+
+/* Livingdatamore */
+
+.section-livingdatamore{
+    transition: translate 1s ease;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    height:50%;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    left:0;
+    bottom:0;
+    right:0;
+    color:white;
+    padding:4em 8em;
+}
+
+.livingdatamore-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:50%;
+    border-right:2px solid #979797;
+}
+
+.livingdatamore-right{
+    width:50%;
+    display: flex;
+    padding-left:8em;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timezoneinfo-control{
+    height:50%;
+}
+
+.timezoneinfo-control h4{
+    color:#777777;
+    font-size:16px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.timezoneinfo-control h2{
+    padding-top:.4em;
+    color:#303030;
+    font-size:46px;
+}
+
