@@ -44,7 +44,7 @@ const LivingData = ({ handleLivingDataMore, LivingDataMoreActive, DayTime }) => 
             <div className="section-livingdata">
                 <div className="livingdata_text">
                     <p><FontAwesomeIcon icon={DayTime ? faSun : faMoon} /> {DayTime ? `GOOD MORNING` : `GOOD EVENING`}, IT'S CURRENTLY</p>
-                    <h1>{currentDate} PM</h1>
+                    <h1>{currentDate}</h1>
                     <div className="Town-Country-btn" key={locations.ip}><h3>IN {locations.city} {locations.country_name}</h3>
                         <button
                             className="show-hide-btn"
